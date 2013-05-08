@@ -1,0 +1,11 @@
+﻿@model MvcApplication10.ViewModels.Home.IndexViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p><label>名前</label>: @Html.DisplayFor(x => x.Name)</p>
+<p><label>いろいろ</label>: @Html.DisplayFor(x => x.Description)</p>
+
+<p><a href="@Url.Action("Edit")">編集する</a></p>

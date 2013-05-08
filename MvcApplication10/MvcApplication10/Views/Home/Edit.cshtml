@@ -1,0 +1,23 @@
+﻿@model MvcApplication10.ViewModels.Home.EditInputModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    if (!ViewData.ModelState.IsValid)
+    {
+        <h3>エラーがありますね</h3>
+         @Html.ValidationSummary()
+    }
+    
+    <p><label>@Html.DisplayNameFor(x => x.Name)</label>: @Html.EditorFor(x => x.Name)</p>
+    <p>@Html.ValidationMessageFor(x => x.Name)</p>
+    
+    <p><label>@Html.DisplayNameFor(x => x.Description)</label>: @Html.EditorFor(x => x.Description)</p>
+    <p>@Html.ValidationMessageFor(x => x.Description)</p>
+    
+    <p><input type="submit" value="さぶみっと"/></p>
+}
